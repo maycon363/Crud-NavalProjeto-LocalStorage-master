@@ -28,7 +28,7 @@ const ComandantesLista = () => {
   return (
     <div>
         <div className="text-center">
-          <h1>Total De Comandates de Esquadra</h1>
+          <h1>Total De Comandantes de Esquadra</h1>
         </div>
         {comandante.length === 0 && <h1><Spinner animation="border" variant="success" />Carregando... </h1>}
 
