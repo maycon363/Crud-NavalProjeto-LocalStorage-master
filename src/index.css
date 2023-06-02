@@ -67,10 +67,6 @@ code {
   justify-content: center;
   padding-left: 5px;
 }
-.bots{
-  display: flex;
-  justify-content: center;
-}
 .iconess{
   display: flex;
   justify-content: space-between;

@@ -34,10 +34,10 @@ const MissaoLista = () => {
     {missao.length === 0 && <h1><Spinner animation="border" variant="success" /> Carregando... </h1>}
 
     <Container>
+      <div className="text-center">
+        <Link className='btn btn-success mb-3 butao' to={'/missao/create'}><AiOutlinePlus /> Inserir</Link>
+      </div>
       <Row>
-       <div className="text-center">
-          <Link className='btn btn-success mb-3 butao' to={'/missao/create'}><AiOutlinePlus /> Inserir</Link>
-        </div>
         {
           missao.map((item, i)=> (
             <Col key={i} md={4} className='ml-4 g-2 letra '  >
@@ -73,10 +73,10 @@ const MissaoLista = () => {
             </Col>
           ))
         }
-        <div className='mb-2 bots'>
-          <Link to={-1} className='btn btn-danger'><AiOutlineRollback/> Voltar</Link>
-        </div>
       </Row>
+      <div className='text-center'>
+        <Link to={-1} className='btn btn-danger'><AiOutlineRollback/> Voltar</Link>
+      </div>
     </Container>
   </div>
     );

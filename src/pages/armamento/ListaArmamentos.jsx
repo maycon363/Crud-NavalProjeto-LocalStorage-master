@@ -30,10 +30,10 @@ const ListaArmamentos = () => {
             {armamento.length === 0 && <h1><Spinner animation="border" variant="success" />Carregando... </h1>}
 
             <Container>
-                <Row>
                     <div className="text-center">
                         <Link className='btn btn-success mb-2 butao' to={'/armamentos/create'}><AiOutlinePlus /> Inserir</Link>
                     </div>
+                <Row>
                     {
                     armamento.map((item, i)=> (
                         <Col key={i} md={4} className='ml-4 g-2 letra'  >
@@ -63,10 +63,10 @@ const ListaArmamentos = () => {
                         </Col>
                     ))
                     }
-                    <div className='mb-2 bots'>
-                        <Link to={-1} className='btn btn-danger'><AiOutlineRollback/> Voltar</Link>
-                    </div>
                 </Row>
+                <div className='text-center mb-3'>
+                    <Link to={-1} className='btn btn-danger'><AiOutlineRollback/> Voltar</Link>
+                </div>
             </Container>
         </div>
     );

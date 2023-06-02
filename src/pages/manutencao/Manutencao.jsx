@@ -77,11 +77,11 @@ const Manutencao = () => {
                     {errors.custo && <p style={{color: "red"}}>{errors.custo.message}</p>}
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="situacao">
-                    <Form.Label>Situação </Form.Label>
+                    <Form.Label>Situação: </Form.Label>
                       <Form.Select {...register("situacao", manutencaoValidator.situacao)}>
-                        <option value={"N"}>Selecione</option>
-                        <option value={"A"}>Ativo</option>
-                        <option value={"I"}>Inativo</option>
+                        <option value={"N"}>Não Iniciado</option>
+                        <option value={"A"}>Rapido</option>
+                        <option value={"I"}>Lento</option>
                         {errors === "Error" && <p style={{color: "red"}}>Selecione Ativo ou Nativo!</p>}
                       </Form.Select>
                 </Form.Group>

@@ -31,15 +31,15 @@ const ManutencaoLista = () => {
   return (
     <div>
         <div className="text-center">
-          <h1>Total De Navios em Construção</h1>
+          <h1>Total De Navios em Manutenção</h1>
         </div>
     {manutencao.length === 0 && <h1><Spinner animation="border" variant="success" />Carregando... </h1>}
 
     <Container>
+      <div className="text-center">
+        <Link className='btn btn-success butao' to={'/construcao/create'}><AiOutlinePlus /> Inserir</Link>
+      </div>
       <Row>
-       <div className="text-center">
-          <Link className='btn btn-success butao' to={'/construcao/create'}><AiOutlinePlus /> Inserir</Link>
-        </div>
           {
             manutencao.map((item, i)=> (
               <Col key={i} md={4} className='ml-4 g-2 letra '  >
@@ -63,7 +63,9 @@ const ManutencaoLista = () => {
                       label="Editar"
                       color="info"
                     />
-                  </Link>{' '}
+                  </Link>
+                  
+                  {' '}
                     
                   <Chip
                     color="error"
@@ -74,10 +76,10 @@ const ManutencaoLista = () => {
               </Col>
             ))
           }
-          <div className='mb-2 bots'>
-            <Link to={-1} className='btn btn-danger'><AiOutlineRollback/> Voltar</Link>
-          </div>
       </Row>
+      <div className='text-center'>
+        <Link to={-1} className='btn btn-danger'><AiOutlineRollback/> Voltar</Link>
+      </div>
     </Container>
   </div>
     );

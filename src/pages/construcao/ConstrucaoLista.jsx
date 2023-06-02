@@ -35,14 +35,14 @@ const ConstrucaoLista = () => {
     {construcao.length === 0 && <h1><Spinner animation="border" variant="success" />Carregando... </h1>}
 
     <Container>
-      <Row>
-        <div className="text-center">
+    <   div className="text-center">
           <Link className='btn btn-success mb-2 butao' to={'/construcao/create'}><AiOutlinePlus /> Inserir</Link>
         </div>
+      <Row>
         {
           construcao.map((item, i)=> (
-            <Col key={i} md={4} className='ml-4 g-2 letra'  >
-              <Card className='mb-2 cards' border="danger">
+            <Col key={i} md={4} className='ml-4 g-2 '  >
+              <Card className='mb-2 cards letra' border="danger">
                 <Card.Body>
                   <Card.Title><strong>{item.nome}</strong></Card.Title>
                 </Card.Body>
@@ -68,10 +68,10 @@ const ConstrucaoLista = () => {
             </Col>
           ))
         }
-        <div className='mb-2 bots'>
-          <Link to={-1} className='btn btn-danger'><AiOutlineRollback/> Voltar</Link>
-        </div>
       </Row>
+      <div className='text-center mb-3'>
+            <Link to={-1} className='btn btn-danger'><AiOutlineRollback/> Voltar</Link>
+        </div>
     </Container>
   </div>
     );
