@@ -8,6 +8,7 @@ import { Link, useNavigate, useParams } from 'react-router-dom'
 import { mask } from 'remask'
 import ComandatesService from '../../services/academico/ComandatesService'
 import ComandantesValidator from '../../validators/ComandantesValidator'
+import VidyardPlayer from 'react-player/vidyard'
 
 const Comandantes = () => {
 
@@ -45,7 +46,7 @@ const Comandantes = () => {
      return (
         <div>
             <div className='para'>
-                <ReactPlayer playing={true} loop={true} controls={false} onPlay={true} url='https://youtu.be/Rr4utWfl90A' />
+                <ReactPlayer playing={true} loop={true} controls={false} onPlay={true} url='https://youtu.be/xXzJhWt1gY4?t=31' />
             </div>
             <div className="text-center">
             <h1>Inserir Novo Comandante</h1>
@@ -81,11 +82,10 @@ const Comandantes = () => {
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="situacao">
                     <Form.Label>Situação: </Form.Label>
-                    <Form.Select {...register("situacao", ComandantesValidator.situacao)}>
+                    <Form.Select aria-label="Default select example" {...register("situacao", ComandantesValidator.situacao)}>
                         <option value={"N"}>Selecione</option>
                         <option value={"A"}>Ativo</option>
                         <option value={"I"}>Inativo</option>
-                        {errors.situacao && <span>Campo Obrigatório</span>}
                     </Form.Select>
                 </Form.Group>
                 <div className="text-center mb-5" >

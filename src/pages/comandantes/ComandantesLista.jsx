@@ -43,15 +43,15 @@ const ComandantesLista = () => {
                     <Card className='mb-2 cards letra' border="danger">
                       <Card.Body>
                         <Card.Title>
-                          <strong>{item.nome}</strong>
+                          <strong>{item.guerra}</strong>
                         </Card.Title>
                       </Card.Body>
-                      <Card.Body >
+                      <Card.Body>
                         <Card.Text><strong>Data de Nascimento: </strong>{item.data}</Card.Text>
                         <Card.Text><strong>Idade: </strong> {item.idade}</Card.Text>
                         <Card.Text><strong>CPF: </strong>{item.cpf}</Card.Text>
                         <Card.Text><strong>RG: </strong> {item.rg}</Card.Text>
-                        <Card.Text className='lets'><strong>Situação do Navio: </strong> 
+                        <Card.Text className='lets'><strong>Situação: </strong> 
                             {item.situacao ===  "A" && <Spinner animation="border" variant="success" />}
                             {item.situacao ===  "I" && <Spinner animation="border" variant="danger" />}
                             {item.situacao ===  "N" && <Spinner animation="border" variant="warning" />}
